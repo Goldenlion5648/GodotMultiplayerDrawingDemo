@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4axasy4oub8a"]
+
+[ext_resource type="Texture2D" uid="uid://b3puacrmgw7ka" path="res://simple64x_tiles5.png" id="2_vhxwa"]
+[ext_resource type="Script" path="res://objects/TileMap.gd" id="3_jwgr1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_461i2"]
+texture = ExtResource("2_vhxwa")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+3:1/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_c00hm"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_461i2")
+
+[node name="main" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_c00hm")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65535, 0, 0, -65534, 0, 0, 2, 0, 0, 3, 0, 0, 65539, 0, 0, -65533, 196608, 0, -65532, 196608, 0, 4, 196608, 0, 65540, 196608, 0, 131076, 131072, 0, 131075, 131072, 0, 131074, 131072, 0, 65538, 131072, 0, 1, 65536, 0, 65537, 65536, 0, 131073, 65536, 0)
+script = ExtResource("3_jwgr1")
